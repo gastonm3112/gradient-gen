@@ -3,3 +3,7 @@
   height: 200px;
   margin-top: 1.5em;
 }
+
+input[type="radio"] {
+  margin-top: 1.5em;
+}
