@@ -3,7 +3,8 @@ const app = Vue.createApp({
         return {
             title: "Gradient Gen",
             firstColor: "#7892f2",
-            secondColor: "#4ff443"
+            secondColor: "#4ff443",
+            orientation: 1
 
         }
     },
