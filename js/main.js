@@ -9,8 +9,7 @@ const app = Vue.createApp({
     },
     computed: {
         setColor() {
-            return `background: linear-gradient(to right,
-                 ${this.firstColor}, ${this.secondColor});`;
+            return `background: linear-gradient(to right, ${this.firstColor}, ${this.secondColor});`;
         }
     }
 });

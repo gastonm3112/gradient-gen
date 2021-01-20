@@ -29,8 +29,13 @@
         <p>Color 1: {{ firstColor }}</p>
         <p>Color 2: {{ secondColor }}</p>
 
-        <p> {{ setColor }} </p>
+        <form>
+            <label>
+                <input type="text" :value="setColor">
+            </label>
+        </form>
 
+        <div class="gradient_area" :style="setColor"></div>
     </div>
 
 
