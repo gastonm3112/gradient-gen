@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Gen</title>
-
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./css/styles.css">
     <!-- Vue -->
     <script src="https://unpkg.com/vue@next"></script>
 </head>
@@ -15,6 +16,27 @@
         <h1>{{ title }}</h1>
         <hr>
 
+        <form>
+            <label>
+                Color 1: <input type="color" v-model="firstColor">
+            </label>
+
+            <label>
+                Color 2: <input type="color" v-model="secondColor">
+            </label>
+
+        </form>
+
+        <p>Color 1: {{ firstColor }}</p>
+        <p>Color 2: {{ secondColor }}</p>
+
+        <form>
+            <label>
+                <input type="text" :value="setColor">
+            </label>
+        </form>
+
+        <div class="gradient_area" :style="setColor"></div>
     </div>
 
 
