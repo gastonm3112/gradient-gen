@@ -1,3 +1,22 @@
+/* Fuente Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Estilos Mobile */
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.color_area {
+  margin: 0 0.8em;
+}
+
+.style_area {
+  width: 95%;
+}
+
 .gradient_area {
   width: 100%;
   height: 200px;

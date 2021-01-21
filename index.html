@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Gen</title>
+    <meta name="description" content="Generador de degradado para CSS realizado en Vue 3">
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- Vue -->
@@ -19,11 +20,11 @@
         <!-- Selección color -->
         <form>
             <label>
-                Color 1: <input type="color" v-model="firstColor">
+                Color 1: <input class="color_area" type="color" v-model="firstColor">
             </label>
 
             <label>
-                Color 2: <input type="color" v-model="secondColor">
+                Color 2: <input class="color_area" type="color" v-model="secondColor">
             </label>
 
         </form>
@@ -35,7 +36,7 @@
         <!-- Visualización estilo generado -->
         <form>
             <label>
-                <input type="text" :value="setColor">
+                <input class="style_area" type="text" :value="setColor">
             </label>
         </form>
 
