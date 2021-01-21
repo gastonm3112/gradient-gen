@@ -3,6 +3,8 @@ const CACHE_NAME = "v1_cache_gradient_gen";
 const urlsToCache = [
     "./",
     "./?utm_source=web_app_manifest",
+    "./pages/fallback.html",
+    "./pages/css/styles.css",
     "./img/favicon.png",
     "./img/icon32.png",
     "./img/icon64.png",
@@ -52,7 +54,7 @@ self.addEventListener("activate", e => {
             ).then(
                 () => self.clients.claim()
             )
-    )
+    );
 });
 
 //Escuchando fetch, actualizar cache
@@ -65,6 +67,8 @@ self.addEventListener("fetch", (e) => {
                 }
                 return fetch(e.request);
             }
+        ).catch(
+            () => caches.match("./pages/fallback.html")
         )
-    )
-})
+    );
+});
