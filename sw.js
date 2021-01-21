@@ -52,7 +52,7 @@ self.addEventListener("activate", e => {
             ).then(
                 () => self.clients.claim()
             )
-    )
+    );
 });
 
 //Escuchando fetch, actualizar cache
@@ -65,6 +65,8 @@ self.addEventListener("fetch", (e) => {
                 }
                 return fetch(e.request);
             }
+        ).catch(
+            () => caches.match("./pages/fallback.html")
         )
-    )
-})
+    );
+});
